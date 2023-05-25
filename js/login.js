@@ -1,8 +1,14 @@
+
+//captura o id do icone
 const mode = document.getElementById('mode_icon');
+
+//cria um evento de click para o icone 
+// quando acontece o click, chama uma função que troca propriedades do css para o tema dark
 
 mode.addEventListener('click', () => {
     const form = document.getElementById('login_form');
 
+    //troca de icones
     if(mode.classList.contains('fa-moon')) {
         mode.classList.remove('fa-moon');
         mode.classList.add('fa-sun');
