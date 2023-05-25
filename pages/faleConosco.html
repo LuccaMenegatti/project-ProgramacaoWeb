@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/faleConosco.css" />
+
     <!-- Fontawesome CDN Link -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     />
+
     <title>Formulario de Contato</title>
   </head>
   <body>
@@ -77,5 +79,47 @@
       </div>
     </div>
 </div>
+
+      <div class="layout">
+        <h1>Perguntas Frequentes</h1>
+        <div class="accordion">
+          <div class="accordion__question">
+            <p>Quanto tempo demora para responderem minhas duvidas?</p>
+
+          </div>
+          <div class="accordion__answer">
+            <p>No maximo 1 dia util.</p>
+          </div>
+        </div>
+
+        <div class="accordion">
+          <div class="accordion__question">
+            <p>Na faculdade há professores bons?</p>
+          </div>
+
+          <div class="accordion__answer">
+            <p>
+              Sim, principalmente o Diego Negreto.
+            </p>
+          </div>
+        </div>
+      </div>
+      <br> <br>
+
+      <script>
+
+        let answers = document.querySelectorAll(".accordion");
+        answers.forEach((event) => {
+          event.addEventListener("click", () => {
+            if (event.classList.contains("active")) {
+              event.classList.remove("active");
+            } else {
+              event.classList.add("active");
+            }
+          });
+        });
+        
+      </script>
+      
   </body>
 </html>
